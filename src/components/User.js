@@ -13,7 +13,7 @@ function User() {
     address: "",
     emergencyContact: "",
     medicalConditions: "",
-    wheelchairNeeded: "" // Will use as caretaker required
+    wheelchairNeeded: "" 
   });
 
   const handleChange = (e) => {

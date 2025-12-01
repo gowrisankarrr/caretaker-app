@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Login.css";
 import "./Table.css";
-import "./UserHome.css"; // for OTP modal styling
+import "./UserHome.css";
 
 function DriverHome() {
   const username = sessionStorage.getItem("username");
@@ -14,7 +14,6 @@ function DriverHome() {
   const [otp, setOtp] = useState("");
   const [message, setMessage] = useState("");
 
-  // Fetch all bookings
   const fetchBookings = async () => {
     try {
       const res = await axios.get(
@@ -32,7 +31,7 @@ function DriverHome() {
     fetchBookings();
   }, []);
 
-  // Click complete → show OTP modal
+
   const handleCompleteClick = (bookingId) => {
     setCurrentBookingId(bookingId);
     setOtp("");
@@ -41,7 +40,7 @@ function DriverHome() {
     sendOtp(bookingId);
   };
 
-  // Send OTP to user's email
+
   const sendOtp = async (bookingId) => {
     try {
       await axios.post(
@@ -56,7 +55,6 @@ function DriverHome() {
     }
   };
 
-  // Verify OTP
   const handleVerifyOtp = async () => {
     try {
       const res = await axios.post(
@@ -128,7 +126,6 @@ function DriverHome() {
         </tbody>
       </table>
 
-      {/* OTP Modal */}
       {showOtpDiv && (
         <div className="otp-div">
           <h3>Enter OTP for Booking ID: {currentBookingId}</h3>

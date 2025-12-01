@@ -13,16 +13,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Root and login */}
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
 
-        {/* Signup pages */}
         <Route path="/signup/user" element={<User />} />
         <Route path="/signup/caretaker" element={<Caretaker />} />
         <Route path="/signup/driver" element={<Driver />} />
 
-        {/* Home pages */}
         <Route path="/user/home" element={<UserHome />} />
         <Route path="/caretaker/home" element={<CaretakerHome />} />
         <Route path="/driver/home" element={<DriverHome />} />

@@ -89,8 +89,6 @@ function Login() {
 
   return (
     <div className="page-wrapper">
-
-      {/* Banner ABOVE login container */}
       <img src={welcomeImg} alt="Welcome to SeniorGo" className="top-banner" />
 
       <div className="login-container">

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Table.css";
-import "./UserHome.css"; // for OTP modal styling
+import "./UserHome.css"; 
 
 function CaretakerHome() {
   const username = sessionStorage.getItem("username");
   const password = sessionStorage.getItem("password");
   const [bookings, setBookings] = useState([]);
 
-  // OTP modal states
   const [showOtpDiv, setShowOtpDiv] = useState(false);
   const [currentBookingId, setCurrentBookingId] = useState("");
   const [otp, setOtp] = useState("");
@@ -31,7 +30,6 @@ function CaretakerHome() {
     fetchBookings();
   }, []);
 
-  // Click "Complete" → show OTP modal
   const handleCompleteClick = (bookingId) => {
     setCurrentBookingId(bookingId);
     setOtp("");
@@ -40,7 +38,6 @@ function CaretakerHome() {
     sendOtp(bookingId);
   };
 
-  // Send OTP to user's email
   const sendOtp = async (bookingId) => {
     try {
       await axios.post(
@@ -55,7 +52,6 @@ function CaretakerHome() {
     }
   };
 
-  // Verify OTP and mark booking complete
   const handleVerifyOtp = async () => {
     try {
       const res = await axios.post(
@@ -126,7 +122,6 @@ function CaretakerHome() {
         </tbody>
       </table>
 
-      {/* OTP Modal */}
       {showOtpDiv && (
         <div className="otp-div">
           <h3>Enter OTP for Booking ID: {currentBookingId}</h3>

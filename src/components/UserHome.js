@@ -18,7 +18,6 @@ function UserHome() {
 
   const [userBookings, setUserBookings] = useState([]);
 
-  // ⭐ NEW — Local rating for frontend only
   const [ratings, setRatings] = useState({});
 
   const handleRating = (bookingId, stars) => {
@@ -79,8 +78,6 @@ function UserHome() {
 
   return (
     <div className="userhome-container">
-
-      {/* LEFT 1/3 FORM */}
       <div className="booking-section">
         <h2 className="login-title">Welcome, {username}</h2>
 
@@ -147,7 +144,6 @@ function UserHome() {
         </form>
       </div>
 
-      {/* RIGHT 2/3 TABLE */}
       <div className="table-section">
         <h2 className="table-title">Your Bookings</h2>
 
@@ -182,8 +178,6 @@ function UserHome() {
                   <td>{b.status}</td>
                   <td>{b.caretaker?.username || "Not Assigned"}</td>
                   <td>{b.driver?.username || "Not Assigned"}</td>
-
-                  {/* ⭐ Review Stars */}
                   <td>
                     <div className="star-container">
                       {[1, 2, 3, 4, 5].map((star) => (

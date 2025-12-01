@@ -1,4 +1,4 @@
-/* Main container: flex layout */
+
 .userhome-container {
   display: flex;
   width: 100%;
@@ -7,7 +7,7 @@
   padding: 20px;
 }
 
-/* Left section (1/3) */
+
 .booking-section {
   width: 30%;
   background: #ffffff;
@@ -16,12 +16,10 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-/* Right section (2/3) */
 .table-section {
   width: 70%;
 }
 
-/* ⭐ STAR RATING STYLE */
 .star-container {
   display: flex;
   cursor: pointer;
