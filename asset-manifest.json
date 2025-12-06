@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/caretaker-app/static/css/main.1fc3e3cf.css",
+    "main.js": "/caretaker-app/static/js/main.38095ff7.js",
+    "static/js/453.5c14a9a1.chunk.js": "/caretaker-app/static/js/453.5c14a9a1.chunk.js",
+    "static/media/banner.png": "/caretaker-app/static/media/banner.f1788572d50deec3dbce.png",
+    "index.html": "/caretaker-app/index.html",
+    "main.1fc3e3cf.css.map": "/caretaker-app/static/css/main.1fc3e3cf.css.map",
+    "main.38095ff7.js.map": "/caretaker-app/static/js/main.38095ff7.js.map",
+    "453.5c14a9a1.chunk.js.map": "/caretaker-app/static/js/453.5c14a9a1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1fc3e3cf.css",
+    "static/js/main.38095ff7.js"
+  ]
+}
